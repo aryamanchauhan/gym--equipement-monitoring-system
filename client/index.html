@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kshitij Sharma" />
+    <meta name="description" content="Real-Time Gym Monitoring" />
+    <title>Real-Time Inventory Management System</title>
+
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="js/socket.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/inventory.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__h1">Inventory</h1>
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li>
+            <a href="getItemByID.html">Get Item</a>
+          </li>
+          <!-- <li>
+            <a href="createItem.html">Create Item</a>
+          </li>
+          <li>
+            <a href="updateItem.html">Update Item</a>
+          </li>
+          <li>
+            <a href="deleteItemByID.html">Delete Item</a>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <article id="inventory" class="main__article inventory">
+        <table id="inventory__table" class="inventory__container">
+          <thead>
+            <tr>
+              <th class="inventory__header" scope="col">eqp_id</th>
+              <th class="inventory__header" scope="col">user_id</th>
+              <th class="inventory__header" scope="col">startedAt</th>
+              <th class="inventory__header" scope="col">time</th>
+              <th class="inventory__header" scope="col">status</th>
+            </tr>
+          </thead>
+        </table>
+
+        <p class="center">
+          <a href="#">Back To Top</a>
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

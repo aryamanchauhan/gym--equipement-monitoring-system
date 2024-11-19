@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Kshitij Sharma" />
+    <meta
+      name="description"
+      content="Get an Item from Database using it's ID."
+    />
+    <title>Get Item</title>
+
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="js/socket.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/getItemByID.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__h1">Get Item</h1>
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li>
+            <a href="index.html">Inventory</a>
+          </li>
+          <li>
+            <a href="createItem.html">Create Item</a>
+          </li>
+          <li>
+            <a href="updateItem.html">Update Item</a>
+          </li>
+          <li>
+            <a href="deleteItemByID.html">Delete Item</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main__getItemById" class="main">
+      <article class="main__article item">
+        <h2 class="item__h2">Enter ID of the Item</h2>
+
+        <form class="item__form" onsubmit="handleGetItemSubmit();">
+          <fieldset class="item__fieldset">
+            <p class="item__p">
+              <label class="item__label" for="id">ID:</label>
+              <input
+                class="item__input"
+                type="text"
+                name="id"
+                id="id"
+                placeholder="MongoDB ID of the Item"
+                required
+              />
+            </p>
+          </fieldset>
+
+          <button class="item__button" type="submit">Send</button>
+          <button class="item__button" type="reset">Reset</button>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>

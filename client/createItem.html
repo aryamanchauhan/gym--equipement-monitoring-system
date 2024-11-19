@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Kshitij Sharma" />
+    <meta
+      name="description"
+      content="Add a New Product/Item to the Database."
+    />
+    <title>Create Item</title>
+
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="js/socket.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/createItem.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__h1">Create Item</h1>
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li>
+            <a href="index.html">Inventory</a>
+          </li>
+          <li>
+            <a href="getItemByID.html">Get Item</a>
+          </li>
+          <li>
+            <a href="updateItem.html">Update Item</a>
+          </li>
+          <li>
+            <a href="deleteItemByID.html">Delete Item</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <article class="main__article item">
+        <h2 class="item__h2">Fill details about the Item</h2>
+
+        <form class="item__form" onsubmit="onFormSubmit();">
+          <fieldset class="item__fieldset">
+            <p class="item__p">
+              <label class="item__label" for="eqp_id">Equipment:</label>
+              <input
+                class="item__input"
+                type="number"
+                name="eqp_id"
+                id="eqp_id"
+                placeholder="Equipment Id"
+                required
+              />
+            </p>
+
+            <p class="item__p">
+              <label class="item__label" for="user_id">User:</label>
+              <input
+                class="item__input"
+                type="number"
+                name="user_id"
+                id="user_id"
+                placeholder="User Id"
+                required
+              />
+            </p>
+
+            <p class="item__p">
+              <label class="item__label" for="startedAt">Started At:</label>
+              <input
+                class="item__input"
+                type="datetime-local"
+                name="startedAt"
+                id="startedAt"
+                placeholder="Started at time"
+                required
+              />
+            </p>
+
+            <p class="item__p">
+              <label class="item__label" for="time">Time:</label>
+              <br />
+              <input
+                class="item__input"
+                type="number"
+                name="time"
+                id="time"
+                placeholder="Time"
+                required
+              ></input>
+            </p>
+
+            <p class="item__p">
+              <label class="item__label" for="status">Status:</label>
+              <br />
+              <input
+                class="item__input"
+                type="text"
+                name="status"
+                id="status"
+                placeholder="Status"
+                required
+              ></input>
+            </p>
+
+          </fieldset>
+
+          <button class="item__button" type="submit">Send</button>
+          <button class="item__button" type="reset">Reset</button>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>

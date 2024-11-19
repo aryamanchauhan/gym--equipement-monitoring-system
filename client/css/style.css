@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap");
+
+/* || RESET */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+ *
+ *
+ */
+
+/* || VARIABLES */
+:root {
+  /* FONTS */
+  --FF: "Nunito", sans-serif;
+  --FF-HEADINGS: "Fugaz One";
+  --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+  /* COLORS */
+  --BGCOLOR-FADE: rgb(252, 220, 160);
+  --BGCOLOR: orange;
+  --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+  --BODY-BGCOLOR: #fff;
+  --BORDER-COLOR: #333;
+  --FONT-COLOR: #000;
+  --HEADER-BGCOLOR: #000;
+  --HEADER-COLOR: #fff;
+  --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+  --LINK-ACTIVE: orange;
+  --LINK-COLOR: #333;
+  --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
+
+  --BUTTON-COLOR: #fff;
+  --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
+  --HERO-COLOR: #fff;
+  --NAV-BGCOLOR: #fff;
+
+  /* BORDERS */
+  --BORDERS: 1px solid var(--BORDER-COLOR);
+  --BORDER-RADIUS: 15px;
+
+  /* STANDARD PADDING  */
+  --PADDING-TB: 0.25em;
+  --PADDING-SIDE: 2.5%;
+
+  /* STANDARD MARGIN  */
+  --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+}
+
+/*
+ *
+ *
+ */
+
+/* || DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: light) { */
+  :root {
+    --BGCOLOR-FADE: gray;
+    --BGCOLOR: #000;
+    --BODY-BGCOLOR: #333;
+    --BORDER-COLOR: whitesmoke;
+    --BUTTON-COLOR: #000;
+    --FONT-COLOR: whitesmoke;
+    --HEADER-COLOR: whitesmoke;
+    --HERO-COLOR: #333;
+    --HIGHLIGHT-COLOR: whitesmoke;
+    --LINK-ACTIVE: rgb(252, 200, 103);
+    --LINK-COLOR: whitesmoke;
+    --LINK-HOVER: orange;
+    --NAV-BGCOLOR: rgb(20, 20, 20);
+  }
+}
+
+/*
+ *
+ *
+ */
+
+/* || UTILITY CLASSES */
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ============================================================================ */
+
+/*
+ *
+ *
+ */
+
+html {
+  scroll-behavior: smooth;
+
+  font-size: var(--FS);
+  font-family: var(--FF);
+
+  background-color: var(--BGCOLOR);
+  /* background-image: var(--BGIMAGE); */
+}
+
+body {
+  background-color: var(--BODY-BGCOLOR);
+  color: var(--FONT-COLOR);
+  min-height: 100vh;
+
+  /* max-width: 800px; */
+  /* max-width: 100vw; */
+  max-width: 100%;
+
+  margin: 0 auto;
+
+  border-left: var(--BORDERS);
+  border-right: var(--BORDERS);
+
+  box-shadow: 0 0 10px var(--BORDER-COLOR);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--FF);
+  letter-spacing: 0.1em;
+}
+
+h2,
+h3 {
+  margin-bottom: 1em;
+  color: var(--HIGHLIGHT-COLOR);
+}
+
+p {
+  line-height: 1.5;
+}
+
+a:any-link {
+  color: var(--LINK-COLOR);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--LINK-HOVER);
+}
+
+a:active {
+  color: var(--LINK-ACTIVE);
+}
+
+/*
+ *
+ *
+ */
+
+/* || HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header__h1 {
+  text-align: center;
+  background-color: var(--HEADER-BGCOLOR);
+  color: var(--HEADER-COLOR);
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.header__nav {
+  background-color: var(--NAV-BGCOLOR);
+  border-bottom: var(--BORDERS);
+  font-weight: bold;
+  box-shadow: 0 6px 5px -5px var(--BORDER-COLOR);
+}
+
+.header__ul {
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+/*
+ *
+ *
+ */
+
+/* || MAIN */
+
+.main {
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.main__article {
+  scroll-margin-top: 6.5rem;
+  margin: var(--MARGIN);
+}
+
+.main__article:first-child {
+  margin-top: 1em;
+}
+
+.main__article:last-child {
+  min-height: calc(100vh - 20rem);
+}
+
+/*
+ *
+ *
+ */
+
+/* || INVENTORY */
+
+thead,
+tbody,
+tr {
+  display: contents;
+}
+
+.inventory__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  grid-template-areas:
+    "hd1 hd2 hd3 hd4 hd5"
+    "td td td td td";
+
+  gap: 0.1em;
+  margin-bottom: 1em;
+}
+
+.inventory__td {
+  grid-area: td;
+}
+
+.inventory__header,
+.inventory__td {
+  color: var(--HIGHLIGHT-COLOR);
+  font-weight: bold;
+  height: 100%;
+
+  display: grid;
+  place-content: center;
+}
+
+td,
+.inventory__header,
+.inventory__item {
+  /* width: 100%; */
+
+  max-width: 100%;
+  overflow-x: hidden;
+  /* white-space: nowrap; */
+
+  padding: 1em;
+  border: medium ridge var(--BORDER-COLOR);
+}
+
+.inventory__item {
+  display: grid;
+  place-content: center;
+}
+
+thead th:first-child {
+  border-top-left-radius: var(--BORDER-RADIUS);
+}
+
+thead th:last-child {
+  border-top-right-radius: var(--BORDER-RADIUS);
+}
+
+/*
+ *
+ *
+ */
+
+/* || CREATE ITEM */
+
+.item__h2 {
+  margin: 0;
+}
+
+.item__fieldset {
+  border: none;
+}
+
+.item__p {
+  margin: 1em 0;
+}
+
+.item__label {
+  display: block;
+  font-weight: bold;
+}
+
+.item__input,
+.item__textarea {
+  padding: 0.5em;
+  border-radius: var(--BORDER-RADIUS);
+  column-rule-width: 2px;
+  width: 100%;
+}
+
+.item__button {
+  padding: 0.5em;
+  border-radius: var(--BORDER-RADIUS);
+  background-color: var(--HIGHLIGHT-COLOR);
+
+  /* color: var(--HEADER-COLOR); */
+  color: var(--BUTTON-COLOR);
+
+  font-weight: bold;
+}
+
+/*
+ *
+ *
+ */
+
+/* || MEDIA QUERY */
+
+@media screen and (min-width: 576px) {
+  .inventory__header,
+  .inventory__td {
+    font-size: 125%;
+  }
+}
