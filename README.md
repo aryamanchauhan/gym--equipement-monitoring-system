@@ -1,4 +1,4 @@
-# Intelligent Gym Equipment Management System
+# Real Time Gym Equipment Management System
 ## Overview
 The **Intelligent Gym Equipment Management System** is a technology-driven solution designed to enhance gym resource management and streamline user experiences. By leveraging **Near Field Communication (NFC)** technology, **proximity sensors**, and an **Arduino-based controller**, this system automates workout tracking and equipment usage monitoring.
 
