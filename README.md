@@ -2,6 +2,9 @@
 ## Overview
 The **Intelligent Gym Equipment Management System** is a technology-driven solution designed to enhance gym resource management and streamline user experiences. By leveraging **Near Field Communication (NFC)** technology, **proximity sensors**, and an **Arduino-based controller**, this system automates workout tracking and equipment usage monitoring.
 
+![bp1](https://github.com/user-attachments/assets/d9905750-16f0-461b-8df3-0049548869a4)
+
+
 ### Key Features:
 - **Hands-Free Workout Tracking**: Proximity sensors and NFC readers log equipment usage automatically.
 - **Real-Time Data Streaming**: Enables live updates on equipment availability and user activity using an Express.js server with WebSocket integration.
@@ -33,6 +36,9 @@ The system integrates hardware components and software frameworks for optimal pe
 - Monitor equipment usage live.
 - Generate detailed reports on gym activity.
 - Optimize equipment maintenance schedules based on real-time data.
+
+   ![bp2](https://github.com/user-attachments/assets/01e6ae09-4977-49f9-aaf7-7fca093cc4a7)
+  ![bp4](https://github.com/user-attachments/assets/52fc4172-a4a9-4f17-b4bd-e162f99c06b7)
 
 ## System Setup
 ### Prerequisites:
@@ -73,12 +79,16 @@ The system integrates hardware components and software frameworks for optimal pe
 - **Real-Time Functionality**: Instant updates for users and administrators.
 - **Enhanced Gym Management**: Simplified tracking of equipment status and user engagement.
 
+
+
+
+
 ## Future Work
 - **Wearable Integration**: Compatibility with fitness trackers for more personalized insights.
 - **AI Analytics**: Intelligent workout recommendations and user behavior insights.
 - **Offline Mode**: Ensure functionality in low-connectivity environments.
 
-## Authors
+## Primary Authors
 - Aditya Pratap Singh
 - Aryaman Chauhan
 - Kshitij Sharma
