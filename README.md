@@ -83,14 +83,6 @@ The system integrates hardware components and software frameworks for optimal pe
 - Aryaman Chauhan
 - Kshitij Sharma
 
-**Supervisor**: Dr. Pradeep K, School of Computer Science and Engineering, Vellore Institute of Technology.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Acknowledgments
-Special thanks to Dr. P. Nithyanandam and the faculty at Vellore Institute of Technology for their guidance and support.
-
 ## References
 - WO2016037012A1 - Fitness Data Using Sensors
 - WO2015038051A1 - Gym Equipment Digitization
